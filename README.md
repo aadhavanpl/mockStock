@@ -1,0 +1,3 @@
+# mockStock
+
+stock market simulator
