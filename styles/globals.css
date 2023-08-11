@@ -39,3 +39,11 @@ button {
 	cursor: pointer;
 	outline: inherit;
 }
+
+input {
+	font-family: 'IBM Plex Sans';
+}
+
+input::placeholder {
+	font-family: 'IBM Plex Sans';
+}

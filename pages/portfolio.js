@@ -9,7 +9,6 @@ import styles from '../components/buy.module.css'
 export default function PortfolioPage() {
 	const { user, getUserInfo, userInfo } = useGlobalContext()
 
-	const [openTab, setopenTab] = useState('')
 	const [dataResponse, setdataResponse] = useState([])
 	const [netTurnover, setNetTurnover] = useState(null)
 	const [loader, setLoader] = useState(false)
@@ -34,7 +33,6 @@ export default function PortfolioPage() {
 				},
 			})
 			const res = await response.json()
-			// console.log(res.products)
 			setdataResponse(res.products)
 			setLoader(false)
 		}
@@ -89,17 +87,11 @@ export default function PortfolioPage() {
 						<div className={styles['stock-turnover']}>Turnover</div>
 					</div>
 					{dataResponse?.map((item, index) => (
-						<div key={index}>
+						<>
 							{item?.quantity > 0 && (
-								<div className={styles['stock-wrapper']}>
+								<div className={styles['stock-wrapper']} key={index}>
 									<div
-										className={`${styles['stock-top-wrapper']}  ${openTab == item.stock_tag ? styles['show'] : ''
-											}`}
-										onClick={() => {
-											if (openTab == item.stock_tag) setopenTab('')
-											else setopenTab(item.stock_tag)
-										}}
-									>
+										className={styles['stock-top-wrapper']}>
 										<div className={styles['stock-name-wrapper']}>
 											<div className={styles['stock-name']}>{item.stock_name}</div>
 											<span>{item.stock_tag}</span>
@@ -118,7 +110,7 @@ export default function PortfolioPage() {
 									</div>
 								</div>
 							)}
-						</div>
+						</>
 					))}
 				</div>
 			</Navbar>
