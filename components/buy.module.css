@@ -1,12 +1,12 @@
 .balance-container {
 	display: flex;
 	height: 150px;
-	border-bottom: 1.5px solid var(--border);
+	border-bottom: 1px solid var(--border);
 	padding: 0px 58px;
 	align-items: center;
 	gap: 100px;
-	top: 86px;
-	left: 310px;
+	top: 153px;
+	left: 301px;
 	position: fixed;
 	z-index: 2;
 	width: 100%;
@@ -65,7 +65,7 @@
 	gap: 20px;
 	padding: 58px;
 	margin-left: 310px;
-	margin-top: 236px;
+	margin-top: 306px;
 }
 
 .stock-heading-wrapper {

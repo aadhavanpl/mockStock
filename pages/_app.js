@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
 	return (
 		<>
 			<Head>
-				<title>Mock Stock</title>
+				<title>mockStock</title>
 				<meta name='Mock stock' content="Mock Stock is a real-time stock market simulator." />
 				<link rel='icon' href='/favicon.ico' type="image/x-icon" />
 			</Head>

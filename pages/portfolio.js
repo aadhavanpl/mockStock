@@ -62,13 +62,6 @@ export default function PortfolioPage() {
 							<img src='/arrow-right.svg' className={styles['navbar-arrow']} />
 						</div>
 					</div>
-					{/* <div className={styles['balance-wrapper']}>
-						Net Worth
-						<div className={styles['money-wrapper']}>
-							${userInfo.balance}
-							<img src='/arrow-right.svg' />
-						</div>
-					</div> */}
 					{netTurnover < 0 && (
 						<div className={styles['balance-wrapper']} style={{ color: 'var(--red)' }}>
 							<span style={{ color: "#94252d" }}>Net Turnover</span>
@@ -92,13 +85,12 @@ export default function PortfolioPage() {
 					<div className={styles['stock-heading-wrapper']}>
 						<div className={styles['stock-name-wrapper']}>Stock</div>
 						<div className={styles['stock-shares-owned']}>Shares owned</div>
-						{/* <div className={styles['stock-amount-spent']}>Net Debit</div> */}
 						<div className={styles['stock-total-worth']}>Curr. value</div>
 						<div className={styles['stock-turnover']}>Turnover</div>
 					</div>
 					{dataResponse?.map((item, index) => (
 						<div key={index}>
-							{item.quantity > 0 && (
+							{item?.quantity > 0 && (
 								<div className={styles['stock-wrapper']}>
 									<div
 										className={`${styles['stock-top-wrapper']}  ${openTab == item.stock_tag ? styles['show'] : ''
@@ -113,7 +105,6 @@ export default function PortfolioPage() {
 											<span>{item.stock_tag}</span>
 										</div>
 										<div className={styles['stock-shares-owned']}>{item.quantity}</div>
-										{/* <div className={styles['stock-amount-spent']}>${item.amount_spent}</div> */}
 										<div className={styles['stock-total-worth']}>${item.curr_total_price}</div>
 										{item.turnover < 0 ? (
 											<div className={styles['stock-turnover']} style={{ color: 'var(--red)' }}>

@@ -4,8 +4,8 @@
 }
 
 .left-wrapper {
-	min-width: 310px;
-	border-right: 1.5px solid var(--border);
+	min-width: 300px;
+	border-right: 1px solid var(--border);
 	display: flex;
 	flex-direction: column;
 	gap: 70px;
@@ -18,27 +18,28 @@
 .left-heading-wrapper {
 	display: flex;
 	gap: 14px;
-	font-size: 32px;
+	font-size: 25px;
 	line-height: 42px;
 	align-items: center;
 	padding-top: 16px;
 	cursor: pointer;
+	margin-top: 30px;
 }
 
 .left-link-wrapper {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-	height: calc(100vh - 180px);
+	height: calc(100vh - 200px);
 }
 
 .left-link,
 .left-link-active {
 	display: flex;
 	gap: 16px;
-	border-radius: 50px;
+	border-radius: 10px;
 	height: 60px;
-	width: 270px;
+	width: 243px;
 	align-items: center;
 	padding-left: 26px;
 	cursor: pointer;
@@ -46,8 +47,8 @@
 
 .left-link span,
 .left-link-active span {
+	font-size: 20px;
 	font-weight: 600;
-	font-size: 18px;
 	line-height: 26px;
 }
 
@@ -64,15 +65,15 @@
 
 .right-top-wrapper {
 	display: flex;
-	height: 86px;
+	height: 120px;
 	padding: 16px;
 	align-items: center;
-	border-bottom: 1.5px solid var(--border);
 	position: fixed;
 	top: 0;
 	right: 0;
-	width: calc(100% - 310px);
+	width: calc(100% - 333px);
 	background-color: var(--dark-black);
+	border-bottom: 1px solid var(--border);
 }
 
 .right-top-wrapper img {
@@ -111,6 +112,7 @@
 	padding-left: 40px;
 	display: flex;
 	gap: 50px;
+	align-items: center;
 }
 
 .right-top-date span {
@@ -123,11 +125,26 @@
 }
 
 .Open {
-	color: var(--green);
-	font-weight: 700;
+	background-color: var(--green);
 }
 
 .Closed {
-	color: var(--red);
-	font-weight: 700;
+	background-color: var(--red);
+}
+
+.market-status {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+
+	border-radius: 20px;
+	padding: 10px;
+}
+
+.status {
+	margin-left: 14px;
+}
+
+.status span {
+	color: rgba(255, 255, 255, 0.7);
 }

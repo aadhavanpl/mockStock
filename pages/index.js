@@ -33,7 +33,7 @@ export default function HomePage() {
 					market simulator.
 				</span>
 				<div className={styles['buttons']}>
-					<button className={styles['get-started']}>Get Started</button>
+					<button className={styles['get-started']} onClick={signIn}>Get Started</button>
 					<button className={styles['arrow-wrapper']}>
 						<img src='/home-arrow.svg' className={styles['arrow']} />
 					</button>
