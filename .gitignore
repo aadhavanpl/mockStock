@@ -1,0 +1,7 @@
+node_modules
+.next/
+
+.env
+
+apiKeys.js
+assets/apiKeys.js

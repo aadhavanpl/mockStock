@@ -1,0 +1,84 @@
+.container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	z-index: 999999;
+}
+
+.wrapper {
+	position: relative;
+	background-color: var(--off-white);
+	width: 425px;
+	height: 236px;
+	border-radius: 20px;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.color-line {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	min-height: 16px;
+	border-radius: 20px 20px 0 0;
+}
+
+.svg {
+	position: absolute;
+	height: 86px;
+	width: 86px;
+	border-radius: 50%;
+	display: fixed;
+	top: -35px;
+	left: 177px;
+	background-color: var(--green);
+	display: flex;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.green {
+	background-color: var(--green);
+}
+
+.red {
+	background-color: var(--red);
+}
+
+.tick img {
+	height: 32px;
+}
+
+.wrapper h1 {
+	font-size: 36px;
+	line-height: 47px;
+	padding-top: 80px;
+	color: var(--black);
+}
+
+.wrapper h3 {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 21px;
+	color: var(--black);
+	padding-top: 8px;
+}
+
+.wrapper span {
+	font-size: 13px;
+	line-height: 17px;
+	color: var(--grey);
+	padding-top: 50px;
+}

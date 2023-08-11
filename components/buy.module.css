@@ -1,0 +1,335 @@
+.balance-container {
+	display: flex;
+	height: 150px;
+	border-bottom: 1.5px solid var(--border);
+	padding: 0px 58px;
+	align-items: center;
+	gap: 100px;
+	top: 86px;
+	left: 310px;
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+	background-color: var(--dark-black);
+}
+
+.balance-wrapper,
+.turnover-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 26px;
+	color: var(--grey);
+}
+
+.balance-container:hover .navbar-arrow {
+}
+
+.navbar-arrow {
+	margin-top: 2px;
+	animation: leftright 1s cubic-bezier(0.49, 0.01, 0.34, 0.95) infinite alternate-reverse;
+}
+
+@keyframes leftright {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(0.3rem, 0);
+	}
+}
+
+.turnover-wrapper {
+	margin-left: auto;
+}
+
+.money-wrapper,
+.turnover {
+	display: flex;
+	gap: 8px;
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 42px;
+	color: var(--white);
+}
+
+.turnover {
+	color: var(--green);
+}
+
+.stock-container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 58px;
+	margin-left: 310px;
+	margin-top: 236px;
+}
+
+.stock-heading-wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 18px 26px;
+	font-size: 16px;
+	line-height: 21px;
+	align-items: center;
+	background-color: var(--dark-blue);
+}
+
+.stock-top-wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 18px 26px;
+	font-size: 16px;
+	line-height: 21px;
+	align-items: center;
+	cursor: pointer;
+}
+
+.stock-top-wrapper-highlight {
+	display: flex;
+	justify-content: space-between;
+	padding: 18px 26px;
+	font-size: 16px;
+	line-height: 21px;
+	align-items: center;
+	background-color: var(--light-blue);
+}
+
+.no-pointer {
+	cursor: default;
+}
+
+.stock-top-wrapper:hover {
+	background-color: var(--drop-down);
+}
+
+.stock-bottom-wrapper {
+	display: flex;
+	height: 93;
+	overflow: hidden;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 21px;
+	align-items: center;
+	width: 100%;
+	padding: 0px 25px;
+	gap: 120px;
+}
+
+.input-container {
+	display: flex;
+	gap: 10px;
+}
+
+.input-container img {
+	padding-top: 20px;
+	width: 16px;
+	cursor: pointer;
+}
+
+.input-wrapper {
+	display: flex;
+	flex-direction: column;
+	padding: 16px 0px;
+}
+
+.input-wrapper input {
+	background-color: transparent;
+	height: 40px;
+	outline: none;
+	border-bottom: 1px solid var(--grey);
+	width: 190px;
+}
+
+.input-wrapper input::-webkit-outer-spin-button,
+.input-wrapper input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+.input-wrapper input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+.input-wrapper input::placeholder {
+	color: #4c4d50;
+}
+
+.total-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.trans-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 18px 0;
+}
+
+.trans-wrapper span {
+	font-size: 20px;
+	color: var(--grey);
+}
+
+.total-wrapper span {
+	font-size: 20px;
+	color: var(--grey);
+}
+
+.buy-btn {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	background-color: var(--light-blue);
+	border-radius: 50px;
+	padding: 12px 30px;
+	cursor: pointer;
+	margin-left: auto;
+}
+
+.buy-btn span {
+	font-size: 18px;
+	margin-bottom: 2px;
+}
+
+.stock-name-wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 150px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.stock-name-wrapper span {
+	font-size: 14px;
+	line-height: 18px;
+	color: var(--grey);
+}
+
+.stock-value {
+	width: 105px;
+	display: flex;
+	justify-content: center;
+}
+
+.stock-turnover {
+	width: 105px;
+	display: flex;
+	justify-content: center;
+}
+
+.stock-percentage-wrapper {
+	display: flex;
+	gap: 4px;
+	align-items: center;
+	width: 105px;
+}
+
+.stock-percentage-wrapper img {
+	height: 14px;
+}
+
+.stock-percentage-inc {
+	color: var(--green);
+}
+
+.stock-percentage-dec {
+	color: var(--red);
+}
+
+.show .answer {
+	display: inline-block;
+}
+
+.stock-market-cap {
+	width: 105px;
+	display: flex;
+	justify-content: center;
+}
+
+.stock-more {
+	width: 40px;
+	display: flex;
+	justify-content: center;
+}
+
+.stock-rank {
+	width: 40px;
+	display: flex;
+	justify-content: center;
+}
+
+.stock-name {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.stock-portfolio-worth {
+	width: 140px;
+	display: flex;
+	justify-content: center;
+}
+
+.stock-net-worth {
+	width: 120px;
+	display: flex;
+	justify-content: center;
+}
+
+.stock-shares-owned {
+	width: 105px;
+	display: flex;
+	justify-content: center;
+}
+
+.stock-amount-spent {
+	width: 105px;
+	display: flex;
+	justify-content: center;
+}
+
+.stock-total-worth {
+	width: 105px;
+	display: flex;
+	justify-content: center;
+}
+
+.stock-trans-number {
+	width: 40px;
+	display: flex;
+	justify-content: center;
+}
+
+.stock-user-email {
+	width: 270px;
+}
+
+.stock-user-name {
+	width: 250px;
+}
+
+.stock-user-name-highlighted {
+	width: 250px;
+	background-color: red;
+}
+
+.buy {
+	background-color: var(--red-buy);
+}
+
+.buy:hover {
+	background-color: var(--red-hover);
+}
+
+.sell {
+	background-color: var(--green-sell);
+}
+
+.sell:hover {
+	background-color: var(--green-hover);
+}

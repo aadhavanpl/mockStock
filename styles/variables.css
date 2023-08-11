@@ -1,0 +1,17 @@
+:root {
+	--black: #0a0b0d;
+	--white: #ffffff;
+	--off-white: #e6e6e6;
+	--green: #0f9855;
+	--green-sell: rgba(15, 152, 85, 0.6);
+	--red: #bf252d;
+	--red-buy: rgba(191, 37, 45, 0.6);
+	--grey: #8a919e;
+	--red-hover: rgba(191, 37, 45, 0.8);
+	--green-hover: rgba(15, 152, 85, 0.8);
+	--drop-down: #0e0e11;
+	--border: #24262a;
+	--dark-blue: #051537;
+	--light-blue: #457bf0;
+	--dark-black: #000;
+}
