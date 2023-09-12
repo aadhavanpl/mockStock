@@ -105,6 +105,7 @@ export default function BuyPage() {
 						}),
 						headers: {
 							'Content-Type': 'application/json',
+							'Access-Control-Allow-Origin': 'https://mockstock.live/'
 						},
 					})
 					await currResponseYestResult.json()
@@ -120,6 +121,7 @@ export default function BuyPage() {
 						}),
 						headers: {
 							'Content-Type': 'application/json',
+							'Access-Control-Allow-Origin': 'https://mockstock.live/'
 						},
 					})
 					await currResponseYestResult.json()
@@ -135,6 +137,7 @@ export default function BuyPage() {
 						}),
 						headers: {
 							'Content-Type': 'application/json',
+							'Access-Control-Allow-Origin': 'https://mockstock.live/'
 						},
 					})
 					await currResponseYestResult.json()
@@ -149,6 +152,7 @@ export default function BuyPage() {
 					body: JSON.stringify({ data: [fetchedData[i], fetchedData[i + 1], fetchedData[i + 2]] }),
 					headers: {
 						'Content-Type': 'application/json',
+						'Access-Control-Allow-Origin': 'https://mockstock.live/'
 					},
 				})
 				await currResponseResult.json()
@@ -162,6 +166,7 @@ export default function BuyPage() {
 					body: JSON.stringify({ data: [fetchedData[i], fetchedData[i + 1], fetchedData[i + 2]] }),
 					headers: {
 						'Content-Type': 'application/json',
+						'Access-Control-Allow-Origin': 'https://mockstock.live/'
 					},
 				})
 				await currResponseResult.json()
@@ -175,6 +180,7 @@ export default function BuyPage() {
 					body: JSON.stringify({ data: [fetchedData[i], fetchedData[i + 1], fetchedData[i + 2]] }),
 					headers: {
 						'Content-Type': 'application/json',
+						'Access-Control-Allow-Origin': 'https://mockstock.live/'
 					},
 				})
 				await currResponseResult.json()
@@ -208,6 +214,7 @@ export default function BuyPage() {
 			body: JSON.stringify({ data }),
 			headers: {
 				'Content-Type': 'application/json',
+				'Access-Control-Allow-Origin': 'https://mockstock.live/'
 			},
 		})
 		await response.json()
