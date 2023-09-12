@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from '../components/home.module.css'
 
 export default function about() {
   return (
