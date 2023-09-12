@@ -1,17 +1,7 @@
 /** @type {import('next').NextConfig} */
-
-module.exports = {
-	async headers() {
-		return [
-			{
-				source: '/api/:path*',
-				headers: [
-					{ key: "Access-Control-Allow-Origin", value: "*" },
-				]
-			}
-		]
-	}
-}, nextConfig = {
+const nextConfig = {
 	reactStrictMode: true,
-	swcMinify: true
-};
+	swcMinify: true,
+}
+
+module.exports = nextConfig
