@@ -33,7 +33,7 @@ export default function BuyPage() {
 		/* gets all the stocks from db */
 		async function getFirstData() {
 			setLoader(true)
-			const apiUrlEndpoint = 'http://localhost:3000/api/buy-lib'
+			const apiUrlEndpoint = 'https://mockstock.live/api/buy-lib'
 			const response = await fetch(apiUrlEndpoint)
 			const res = await response.json()
 			setdataResponse(res.products)
@@ -97,7 +97,7 @@ export default function BuyPage() {
 
 				for (let i = 0; i < 51; i += 3) {
 					console.log(curr_yest_price[i], curr_yest_price[i + 1], curr_yest_price[i + 2])
-					const currApiYestUpdate = 'http://localhost:3000/api/update-yest-lib'
+					const currApiYestUpdate = 'https://mockstock.live/api/update-yest-lib'
 					const currResponseYestResult = await fetch(currApiYestUpdate, {
 						method: 'POST',
 						body: JSON.stringify({
@@ -112,7 +112,7 @@ export default function BuyPage() {
 
 				for (let i = 51; i < 102; i += 3) {
 					console.log(curr_yest_price[i], curr_yest_price[i + 1], curr_yest_price[i + 2])
-					const currApiYestUpdate = 'http://localhost:3000/api/update-yest-lib'
+					const currApiYestUpdate = 'https://mockstock.live/api/update-yest-lib'
 					const currResponseYestResult = await fetch(currApiYestUpdate, {
 						method: 'POST',
 						body: JSON.stringify({
@@ -127,7 +127,7 @@ export default function BuyPage() {
 
 				for (let i = 102; i < 144; i += 3) {
 					// console.log(curr_yest_price[i], curr_yest_price[i + 1], curr_yest_price[i + 2])
-					const currApiYestUpdate = 'http://localhost:3000/api/update-yest-lib'
+					const currApiYestUpdate = 'https://mockstock.live/api/update-yest-lib'
 					const currResponseYestResult = await fetch(currApiYestUpdate, {
 						method: 'POST',
 						body: JSON.stringify({
@@ -143,7 +143,7 @@ export default function BuyPage() {
 
 			for (let i = 0; i < 51; i += 3) {
 				// console.log(fetchedData[i], fetchedData[i + 1], fetchedData[i + 2])
-				const currApiResultUpdate = 'http://localhost:3000/api/update-curr-lib'
+				const currApiResultUpdate = 'https://mockstock.live/api/update-curr-lib'
 				const currResponseResult = await fetch(currApiResultUpdate, {
 					method: 'POST',
 					body: JSON.stringify({ data: [fetchedData[i], fetchedData[i + 1], fetchedData[i + 2]] }),
@@ -156,7 +156,7 @@ export default function BuyPage() {
 
 			for (let i = 51; i < 102; i += 3) {
 				// console.log(fetchedData[i], fetchedData[i + 1], fetchedData[i + 2])
-				const currApiResultUpdate = 'http://localhost:3000/api/update-curr-lib'
+				const currApiResultUpdate = 'https://mockstock.live/api/update-curr-lib'
 				const currResponseResult = await fetch(currApiResultUpdate, {
 					method: 'POST',
 					body: JSON.stringify({ data: [fetchedData[i], fetchedData[i + 1], fetchedData[i + 2]] }),
@@ -169,7 +169,7 @@ export default function BuyPage() {
 
 			for (let i = 102; i < 147; i += 3) {
 				// console.log(fetchedData[i], fetchedData[i + 1], fetchedData[i + 2])
-				const currApiResultUpdate = 'http://localhost:3000/api/update-curr-lib'
+				const currApiResultUpdate = 'https://mockstock.live/api/update-curr-lib'
 				const currResponseResult = await fetch(currApiResultUpdate, {
 					method: 'POST',
 					body: JSON.stringify({ data: [fetchedData[i], fetchedData[i + 1], fetchedData[i + 2]] }),
@@ -180,7 +180,7 @@ export default function BuyPage() {
 				await currResponseResult.json()
 			}
 
-			const apiUrlPercentage = 'http://localhost:3000/api/update-percentage-lib'
+			const apiUrlPercentage = 'https://mockstock.live/api/update-percentage-lib'
 			const responsePercentage = await fetch(apiUrlPercentage)
 			const resPercentage = await responsePercentage.json()
 			setLoader(false)
@@ -192,7 +192,7 @@ export default function BuyPage() {
 	useEffect(() => {
 		async function getFirstData() {
 			setLoader(true)
-			const apiUrlEndpoint = 'http://localhost:3000/api/buy-lib'
+			const apiUrlEndpoint = 'https://mockstock.live/api/buy-lib'
 			const response = await fetch(apiUrlEndpoint)
 			const res = await response.json()
 			setdataResponse(res.products)
@@ -202,7 +202,7 @@ export default function BuyPage() {
 	}, [changed])
 
 	const buyStocks = async (data) => {
-		const apiUrlEndpoint = 'http://localhost:3000/api/buy-lib'
+		const apiUrlEndpoint = 'https://mockstock.live/api/buy-lib'
 		const response = await fetch(apiUrlEndpoint, {
 			method: 'POST',
 			body: JSON.stringify({ data }),
@@ -211,7 +211,7 @@ export default function BuyPage() {
 			},
 		})
 		await response.json()
-		const apiUpdateBalance = 'http://localhost:3000/api/update-balance-lib'
+		const apiUpdateBalance = 'https://mockstock.live/api/update-balance-lib'
 		const responseBalance = await fetch(apiUpdateBalance)
 		const resBalance = await responseBalance.json()
 		getUserInfo({ user_email: user[0].email })

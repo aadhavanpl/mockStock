@@ -20,7 +20,7 @@ export default function LeaderboardPage() {
 	useEffect(() => {
 		async function getPageData() {
 			setLoader(true)
-			const apiUrlEndpoint = 'http://localhost:3000/api/leaderboard-lib'
+			const apiUrlEndpoint = 'https://mockstock.live/api/leaderboard-lib'
 			const response = await fetch(apiUrlEndpoint)
 			const res = await response.json()
 			// console.log(res)

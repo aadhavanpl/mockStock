@@ -24,7 +24,7 @@ export default function PortfolioPage() {
 		async function getPageData() {
 			setLoader(true)
 			const data = { user_email: user[0]?.email, user_emai: user[0]?.email }
-			const apiUrlEndpoint = 'http://localhost:3000/api/portfolio-lib'
+			const apiUrlEndpoint = 'https://mockstock.live/api/portfolio-lib'
 			const response = await fetch(apiUrlEndpoint, {
 				method: 'POST',
 				body: JSON.stringify({ data }),
