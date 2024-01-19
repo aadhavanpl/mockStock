@@ -33,7 +33,6 @@ export default function TansactionsPage() {
 				},
 			})
 			const res = await response.json()
-			// console.log(res.products)
 			setdataResponse(res.products)
 			setLoader(false)
 		}

@@ -96,7 +96,6 @@ export default function BuyPage() {
 				}
 
 				for (let i = 0; i < 51; i += 3) {
-					console.log(curr_yest_price[i], curr_yest_price[i + 1], curr_yest_price[i + 2])
 					const currApiYestUpdate = 'https://mockstock.aadhii.in/api/update-yest-lib'
 					const currResponseYestResult = await fetch(currApiYestUpdate, {
 						method: 'POST',
@@ -112,7 +111,6 @@ export default function BuyPage() {
 				}
 
 				for (let i = 51; i < 102; i += 3) {
-					console.log(curr_yest_price[i], curr_yest_price[i + 1], curr_yest_price[i + 2])
 					const currApiYestUpdate = 'https://mockstock.aadhii.in/api/update-yest-lib'
 					const currResponseYestResult = await fetch(currApiYestUpdate, {
 						method: 'POST',
@@ -128,7 +126,6 @@ export default function BuyPage() {
 				}
 
 				for (let i = 102; i < 144; i += 3) {
-					// console.log(curr_yest_price[i], curr_yest_price[i + 1], curr_yest_price[i + 2])
 					const currApiYestUpdate = 'https://mockstock.aadhii.in/api/update-yest-lib'
 					const currResponseYestResult = await fetch(currApiYestUpdate, {
 						method: 'POST',
@@ -145,7 +142,6 @@ export default function BuyPage() {
 			}
 
 			for (let i = 0; i < 51; i += 3) {
-				// console.log(fetchedData[i], fetchedData[i + 1], fetchedData[i + 2])
 				const currApiResultUpdate = 'https://mockstock.aadhii.in/api/update-curr-lib'
 				const currResponseResult = await fetch(currApiResultUpdate, {
 					method: 'POST',
@@ -159,7 +155,6 @@ export default function BuyPage() {
 			}
 
 			for (let i = 51; i < 102; i += 3) {
-				// console.log(fetchedData[i], fetchedData[i + 1], fetchedData[i + 2])
 				const currApiResultUpdate = 'https://mockstock.aadhii.in/api/update-curr-lib'
 				const currResponseResult = await fetch(currApiResultUpdate, {
 					method: 'POST',
@@ -173,7 +168,6 @@ export default function BuyPage() {
 			}
 
 			for (let i = 102; i < 147; i += 3) {
-				// console.log(fetchedData[i], fetchedData[i + 1], fetchedData[i + 2])
 				const currApiResultUpdate = 'https://mockstock.aadhii.in/api/update-curr-lib'
 				const currResponseResult = await fetch(currApiResultUpdate, {
 					method: 'POST',

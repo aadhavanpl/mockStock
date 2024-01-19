@@ -87,7 +87,6 @@ export default function SellPage() {
 				fetchedData.push(curr_time)
 				fetchedData.push(fetched[i].symbol)
 			}
-			console.log(fetchedData)
 
 			if (curr_time - yest_time > 1440) {
 				//get curr_price from database
@@ -101,10 +100,8 @@ export default function SellPage() {
 					curr_yest_price.push(curr_time)
 					curr_yest_price.push(dataResponse[i]?.stock_tag)
 				}
-				console.log(curr_yest_price)
 
 				for (let i = 0; i < 51; i += 3) {
-					console.log(curr_yest_price[i], curr_yest_price[i + 1], curr_yest_price[i + 2])
 					const currApiYestUpdate = 'https://mockstock.aadhii.in/api/update-yest-lib'
 					const currResponseYestResult = await fetch(currApiYestUpdate, {
 						method: 'POST',
@@ -116,11 +113,9 @@ export default function SellPage() {
 						},
 					})
 					const currApiYestResult = await currResponseYestResult.json()
-					console.log(currApiYestResult)
 				}
 
 				for (let i = 51; i < 102; i += 3) {
-					console.log(curr_yest_price[i], curr_yest_price[i + 1], curr_yest_price[i + 2])
 					const currApiYestUpdate = 'https://mockstock.aadhii.in/api/update-yest-lib'
 					const currResponseYestResult = await fetch(currApiYestUpdate, {
 						method: 'POST',
@@ -132,11 +127,9 @@ export default function SellPage() {
 						},
 					})
 					const currApiYestResult = await currResponseYestResult.json()
-					console.log(currApiYestResult)
 				}
 
 				for (let i = 102; i < 144; i += 3) {
-					console.log(curr_yest_price[i], curr_yest_price[i + 1], curr_yest_price[i + 2])
 					const currApiYestUpdate = 'https://mockstock.aadhii.in/api/update-yest-lib'
 					const currResponseYestResult = await fetch(currApiYestUpdate, {
 						method: 'POST',
@@ -148,12 +141,10 @@ export default function SellPage() {
 						},
 					})
 					const currApiYestResult = await currResponseYestResult.json()
-					console.log(currApiYestResult)
 				}
 			}
 
 			for (let i = 0; i < 51; i += 3) {
-				console.log(fetchedData[i], fetchedData[i + 1], fetchedData[i + 2])
 				const currApiResultUpdate = 'https://mockstock.aadhii.in/api/update-curr-lib'
 				const currResponseResult = await fetch(currApiResultUpdate, {
 					method: 'POST',
@@ -163,11 +154,9 @@ export default function SellPage() {
 					},
 				})
 				const currApiResResult = await currResponseResult.json()
-				console.log(currApiResResult)
 			}
 
 			for (let i = 51; i < 102; i += 3) {
-				console.log(fetchedData[i], fetchedData[i + 1], fetchedData[i + 2])
 				const currApiResultUpdate = 'https://mockstock.aadhii.in/api/update-curr-lib'
 				const currResponseResult = await fetch(currApiResultUpdate, {
 					method: 'POST',
@@ -177,11 +166,9 @@ export default function SellPage() {
 					},
 				})
 				const currApiResResult = await currResponseResult.json()
-				console.log(currApiResResult)
 			}
 
 			for (let i = 102; i < 147; i += 3) {
-				console.log(fetchedData[i], fetchedData[i + 1], fetchedData[i + 2])
 				const currApiResultUpdate = 'https://mockstock.aadhii.in/api/update-curr-lib'
 				const currResponseResult = await fetch(currApiResultUpdate, {
 					method: 'POST',
@@ -191,7 +178,6 @@ export default function SellPage() {
 					},
 				})
 				const currApiResResult = await currResponseResult.json()
-				console.log(currApiResResult)
 			}
 
 			const apiUrlPercentage = 'https://mockstock.aadhii.in/api/update-percentage-lib'
@@ -224,7 +210,6 @@ export default function SellPage() {
 	}, [changed])
 
 	const sellStocks = async (data) => {
-		console.log(data)
 		const apiUrlEndpoint = 'https://mockstock.aadhii.in/api/sell-lib'
 		const response = await fetch(apiUrlEndpoint, {
 			method: 'POST',
