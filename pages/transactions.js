@@ -24,7 +24,7 @@ export default function TansactionsPage() {
 		async function getPageData() {
 			setLoader(true)
 			const data = { user_email: user[0]?.email }
-			const apiUrlEndpoint = 'https://www.mockstock.live/api/transactions-lib'
+			const apiUrlEndpoint = 'https://mockstock.aadhii.in/api/transactions-lib'
 			const response = await fetch(apiUrlEndpoint, {
 				method: 'POST',
 				body: JSON.stringify({ data }),

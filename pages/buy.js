@@ -33,7 +33,7 @@ export default function BuyPage() {
 		/* gets all the stocks from db */
 		async function getFirstData() {
 			setLoader(true)
-			const apiUrlEndpoint = 'https://www.mockstock.live/api/buy-lib'
+			const apiUrlEndpoint = 'https://mockstock.aadhii.in/api/buy-lib'
 			const response = await fetch(apiUrlEndpoint)
 			const res = await response.json()
 			setdataResponse(res.products)
@@ -97,7 +97,7 @@ export default function BuyPage() {
 
 				for (let i = 0; i < 51; i += 3) {
 					console.log(curr_yest_price[i], curr_yest_price[i + 1], curr_yest_price[i + 2])
-					const currApiYestUpdate = 'https://www.mockstock.live/api/update-yest-lib'
+					const currApiYestUpdate = 'https://mockstock.aadhii.in/api/update-yest-lib'
 					const currResponseYestResult = await fetch(currApiYestUpdate, {
 						method: 'POST',
 						body: JSON.stringify({
@@ -105,7 +105,7 @@ export default function BuyPage() {
 						}),
 						headers: {
 							'Content-Type': 'application/json',
-							'Access-Control-Allow-Origin': 'https://www.mockstock.live/'
+							'Access-Control-Allow-Origin': 'https://mockstock.aadhii.in/'
 						},
 					})
 					await currResponseYestResult.json()
@@ -113,7 +113,7 @@ export default function BuyPage() {
 
 				for (let i = 51; i < 102; i += 3) {
 					console.log(curr_yest_price[i], curr_yest_price[i + 1], curr_yest_price[i + 2])
-					const currApiYestUpdate = 'https://www.mockstock.live/api/update-yest-lib'
+					const currApiYestUpdate = 'https://mockstock.aadhii.in/api/update-yest-lib'
 					const currResponseYestResult = await fetch(currApiYestUpdate, {
 						method: 'POST',
 						body: JSON.stringify({
@@ -121,7 +121,7 @@ export default function BuyPage() {
 						}),
 						headers: {
 							'Content-Type': 'application/json',
-							'Access-Control-Allow-Origin': 'https://www.mockstock.live/'
+							'Access-Control-Allow-Origin': 'https://mockstock.aadhii.in/'
 						},
 					})
 					await currResponseYestResult.json()
@@ -129,7 +129,7 @@ export default function BuyPage() {
 
 				for (let i = 102; i < 144; i += 3) {
 					// console.log(curr_yest_price[i], curr_yest_price[i + 1], curr_yest_price[i + 2])
-					const currApiYestUpdate = 'https://www.mockstock.live/api/update-yest-lib'
+					const currApiYestUpdate = 'https://mockstock.aadhii.in/api/update-yest-lib'
 					const currResponseYestResult = await fetch(currApiYestUpdate, {
 						method: 'POST',
 						body: JSON.stringify({
@@ -137,7 +137,7 @@ export default function BuyPage() {
 						}),
 						headers: {
 							'Content-Type': 'application/json',
-							'Access-Control-Allow-Origin': 'https://www.mockstock.live/'
+							'Access-Control-Allow-Origin': 'https://mockstock.aadhii.in/'
 						},
 					})
 					await currResponseYestResult.json()
@@ -146,13 +146,13 @@ export default function BuyPage() {
 
 			for (let i = 0; i < 51; i += 3) {
 				// console.log(fetchedData[i], fetchedData[i + 1], fetchedData[i + 2])
-				const currApiResultUpdate = 'https://www.mockstock.live/api/update-curr-lib'
+				const currApiResultUpdate = 'https://mockstock.aadhii.in/api/update-curr-lib'
 				const currResponseResult = await fetch(currApiResultUpdate, {
 					method: 'POST',
 					body: JSON.stringify({ data: [fetchedData[i], fetchedData[i + 1], fetchedData[i + 2]] }),
 					headers: {
 						'Content-Type': 'application/json',
-						'Access-Control-Allow-Origin': 'https://www.mockstock.live/'
+						'Access-Control-Allow-Origin': 'https://mockstock.aadhii.in/'
 					},
 				})
 				await currResponseResult.json()
@@ -160,13 +160,13 @@ export default function BuyPage() {
 
 			for (let i = 51; i < 102; i += 3) {
 				// console.log(fetchedData[i], fetchedData[i + 1], fetchedData[i + 2])
-				const currApiResultUpdate = 'https://www.mockstock.live/api/update-curr-lib'
+				const currApiResultUpdate = 'https://mockstock.aadhii.in/api/update-curr-lib'
 				const currResponseResult = await fetch(currApiResultUpdate, {
 					method: 'POST',
 					body: JSON.stringify({ data: [fetchedData[i], fetchedData[i + 1], fetchedData[i + 2]] }),
 					headers: {
 						'Content-Type': 'application/json',
-						'Access-Control-Allow-Origin': 'https://www.mockstock.live/'
+						'Access-Control-Allow-Origin': 'https://mockstock.aadhii.in/'
 					},
 				})
 				await currResponseResult.json()
@@ -174,19 +174,19 @@ export default function BuyPage() {
 
 			for (let i = 102; i < 147; i += 3) {
 				// console.log(fetchedData[i], fetchedData[i + 1], fetchedData[i + 2])
-				const currApiResultUpdate = 'https://www.mockstock.live/api/update-curr-lib'
+				const currApiResultUpdate = 'https://mockstock.aadhii.in/api/update-curr-lib'
 				const currResponseResult = await fetch(currApiResultUpdate, {
 					method: 'POST',
 					body: JSON.stringify({ data: [fetchedData[i], fetchedData[i + 1], fetchedData[i + 2]] }),
 					headers: {
 						'Content-Type': 'application/json',
-						'Access-Control-Allow-Origin': 'https://www.mockstock.live/'
+						'Access-Control-Allow-Origin': 'https://mockstock.aadhii.in/'
 					},
 				})
 				await currResponseResult.json()
 			}
 
-			const apiUrlPercentage = 'https://www.mockstock.live/api/update-percentage-lib'
+			const apiUrlPercentage = 'https://mockstock.aadhii.in/api/update-percentage-lib'
 			const responsePercentage = await fetch(apiUrlPercentage)
 			const resPercentage = await responsePercentage.json()
 			setLoader(false)
@@ -198,7 +198,7 @@ export default function BuyPage() {
 	useEffect(() => {
 		async function getFirstData() {
 			setLoader(true)
-			const apiUrlEndpoint = 'https://www.mockstock.live/api/buy-lib'
+			const apiUrlEndpoint = 'https://mockstock.aadhii.in/api/buy-lib'
 			const response = await fetch(apiUrlEndpoint)
 			const res = await response.json()
 			setdataResponse(res.products)
@@ -208,17 +208,17 @@ export default function BuyPage() {
 	}, [changed])
 
 	const buyStocks = async (data) => {
-		const apiUrlEndpoint = 'https://www.mockstock.live/api/buy-lib'
+		const apiUrlEndpoint = 'https://mockstock.aadhii.in/api/buy-lib'
 		const response = await fetch(apiUrlEndpoint, {
 			method: 'POST',
 			body: JSON.stringify({ data }),
 			headers: {
 				'Content-Type': 'application/json',
-				'Access-Control-Allow-Origin': 'https://www.mockstock.live/'
+				'Access-Control-Allow-Origin': 'https://mockstock.aadhii.in/'
 			},
 		})
 		await response.json()
-		const apiUpdateBalance = 'https://www.mockstock.live/api/update-balance-lib'
+		const apiUpdateBalance = 'https://mockstock.aadhii.in/api/update-balance-lib'
 		const responseBalance = await fetch(apiUpdateBalance)
 		const resBalance = await responseBalance.json()
 		getUserInfo({ user_email: user[0].email })

@@ -34,7 +34,7 @@ export default function SellPage() {
 		async function getFirstData() {
 			setLoader(true)
 			const data = { user_email: user[0]?.email }
-			const apiUrlEndpoint = 'https://www.mockstock.live/api/sell-page-data-lib'
+			const apiUrlEndpoint = 'https://mockstock.aadhii.in/api/sell-page-data-lib'
 			const response = await fetch(apiUrlEndpoint, {
 				method: 'POST',
 				body: JSON.stringify({ data }),
@@ -105,7 +105,7 @@ export default function SellPage() {
 
 				for (let i = 0; i < 51; i += 3) {
 					console.log(curr_yest_price[i], curr_yest_price[i + 1], curr_yest_price[i + 2])
-					const currApiYestUpdate = 'https://www.mockstock.live/api/update-yest-lib'
+					const currApiYestUpdate = 'https://mockstock.aadhii.in/api/update-yest-lib'
 					const currResponseYestResult = await fetch(currApiYestUpdate, {
 						method: 'POST',
 						body: JSON.stringify({
@@ -121,7 +121,7 @@ export default function SellPage() {
 
 				for (let i = 51; i < 102; i += 3) {
 					console.log(curr_yest_price[i], curr_yest_price[i + 1], curr_yest_price[i + 2])
-					const currApiYestUpdate = 'https://www.mockstock.live/api/update-yest-lib'
+					const currApiYestUpdate = 'https://mockstock.aadhii.in/api/update-yest-lib'
 					const currResponseYestResult = await fetch(currApiYestUpdate, {
 						method: 'POST',
 						body: JSON.stringify({
@@ -137,7 +137,7 @@ export default function SellPage() {
 
 				for (let i = 102; i < 144; i += 3) {
 					console.log(curr_yest_price[i], curr_yest_price[i + 1], curr_yest_price[i + 2])
-					const currApiYestUpdate = 'https://www.mockstock.live/api/update-yest-lib'
+					const currApiYestUpdate = 'https://mockstock.aadhii.in/api/update-yest-lib'
 					const currResponseYestResult = await fetch(currApiYestUpdate, {
 						method: 'POST',
 						body: JSON.stringify({
@@ -154,7 +154,7 @@ export default function SellPage() {
 
 			for (let i = 0; i < 51; i += 3) {
 				console.log(fetchedData[i], fetchedData[i + 1], fetchedData[i + 2])
-				const currApiResultUpdate = 'https://www.mockstock.live/api/update-curr-lib'
+				const currApiResultUpdate = 'https://mockstock.aadhii.in/api/update-curr-lib'
 				const currResponseResult = await fetch(currApiResultUpdate, {
 					method: 'POST',
 					body: JSON.stringify({ data: [fetchedData[i], fetchedData[i + 1], fetchedData[i + 2]] }),
@@ -168,7 +168,7 @@ export default function SellPage() {
 
 			for (let i = 51; i < 102; i += 3) {
 				console.log(fetchedData[i], fetchedData[i + 1], fetchedData[i + 2])
-				const currApiResultUpdate = 'https://www.mockstock.live/api/update-curr-lib'
+				const currApiResultUpdate = 'https://mockstock.aadhii.in/api/update-curr-lib'
 				const currResponseResult = await fetch(currApiResultUpdate, {
 					method: 'POST',
 					body: JSON.stringify({ data: [fetchedData[i], fetchedData[i + 1], fetchedData[i + 2]] }),
@@ -182,7 +182,7 @@ export default function SellPage() {
 
 			for (let i = 102; i < 147; i += 3) {
 				console.log(fetchedData[i], fetchedData[i + 1], fetchedData[i + 2])
-				const currApiResultUpdate = 'https://www.mockstock.live/api/update-curr-lib'
+				const currApiResultUpdate = 'https://mockstock.aadhii.in/api/update-curr-lib'
 				const currResponseResult = await fetch(currApiResultUpdate, {
 					method: 'POST',
 					body: JSON.stringify({ data: [fetchedData[i], fetchedData[i + 1], fetchedData[i + 2]] }),
@@ -194,7 +194,7 @@ export default function SellPage() {
 				console.log(currApiResResult)
 			}
 
-			const apiUrlPercentage = 'https://www.mockstock.live/api/update-percentage-lib'
+			const apiUrlPercentage = 'https://mockstock.aadhii.in/api/update-percentage-lib'
 			const responsePercentage = await fetch(apiUrlPercentage)
 			const resPercentage = await responsePercentage.json()
 			setLoader(false)
@@ -208,7 +208,7 @@ export default function SellPage() {
 		async function getFirstData() {
 			setLoader(true)
 			const data = { user_email: user[0]?.email }
-			const apiUrlEndpoint = 'https://www.mockstock.live/api/sell-page-data-lib'
+			const apiUrlEndpoint = 'https://mockstock.aadhii.in/api/sell-page-data-lib'
 			const response = await fetch(apiUrlEndpoint, {
 				method: 'POST',
 				body: JSON.stringify({ data }),
@@ -225,7 +225,7 @@ export default function SellPage() {
 
 	const sellStocks = async (data) => {
 		console.log(data)
-		const apiUrlEndpoint = 'https://www.mockstock.live/api/sell-lib'
+		const apiUrlEndpoint = 'https://mockstock.aadhii.in/api/sell-lib'
 		const response = await fetch(apiUrlEndpoint, {
 			method: 'POST',
 			body: JSON.stringify({ data }),
@@ -234,7 +234,7 @@ export default function SellPage() {
 			},
 		})
 		const res = await response.json()
-		const apiUpdateBalance = 'https://www.mockstock.live/api/update-balance-lib'
+		const apiUpdateBalance = 'https://mockstock.aadhii.in/api/update-balance-lib'
 		const responseBalance = await fetch(apiUpdateBalance)
 		getUserInfo({ user_email: user[0].email })
 	}
